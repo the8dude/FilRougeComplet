@@ -1,0 +1,404 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm12="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="c4c81c21-4e74-4a6b-b131-9314913dc0b0" name="ActiviteFR" linkedPackageId="36b1357c-ed5d-4655-8b55-d8ae1328fd41" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="607f089d-0386-4a62-a4f0-b9010e3f577d">
+      <profileInstance Id="a42dfa18-88ce-46dc-8ce4-9185b97e9bc1" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="aac58fb6-acc8-4826-b5b5-f1c169dc80e1">
+      <profileInstance Id="6b70f241-2e9b-44b6-85e2-57e99679d018" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="0e97fa18-28e3-40fb-9471-f7a2dd8358c7" name="ActiviteFR" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="e22cbb5b-f21b-423d-b547-3351eb63e522" />
+        <nodes>
+          <initialNode Id="5f4ff8ca-55db-4457-9e0f-8e8cd1cd9280" name="Initial1" isLeaf="false">
+            <elementDefinition Id="ceaa5746-da33-4a4e-ada0-b01d94872b4c" />
+            <flowNodeTargets>
+              <controlFlow Id="22b50e40-963b-459f-bf80-fe304963df6b" isLeaf="false">
+                <opaqueActionMoniker Id="68f87712-1f90-4c7c-a5ef-d457a26f6a72" LastKnownName="Connexion à la session commercial" />
+                <elementDefinition Id="c88073c0-34fc-4059-8db2-8b31584773aa" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction Id="68f87712-1f90-4c7c-a5ef-d457a26f6a72" name="Connexion à la session commercial" isLeaf="false">
+            <elementDefinition Id="1eba289b-7d82-4ed8-9896-e2728093bb3b" />
+            <flowNodeTargets>
+              <controlFlow Id="8c4df094-0656-4f12-8ba9-7f24fc183ee3" isLeaf="false">
+                <decisionNodeMoniker Id="635eb08a-41c9-4445-ad8c-ca04d46c8a8e" LastKnownName="Decision1" />
+                <elementDefinition Id="35732d48-52cd-47a3-8c54-954a5dd6d214" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="51f5cf6a-8353-4472-a857-f165c681bc14" name="NOUVELLE COMMANDE" isLeaf="false">
+            <elementDefinition Id="48cb41f2-5119-4fcb-a971-1fce9e29cfb0" />
+            <flowNodeTargets>
+              <controlFlow Id="f95e2f3d-793f-4db8-a9dc-5550ef62fadb" isLeaf="false">
+                <opaqueActionMoniker Id="1cfde89a-f79f-4f52-9ce3-a24843a34de8" LastKnownName="Recherche un client" />
+                <elementDefinition Id="c552e4d8-e9e2-470f-984c-4182d1df454f" />
+              </controlFlow>
+              <controlFlow Id="bd25d45d-cafb-4cbd-8497-7a4ccb60b8cc" isLeaf="false">
+                <opaqueActionMoniker Id="3304fe5c-a932-4c2c-b678-dceb298250d6" LastKnownName="L'application plante" />
+                <elementDefinition Id="66f6894d-cc58-4794-ba58-71fd4358be1d" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode Id="635eb08a-41c9-4445-ad8c-ca04d46c8a8e" name="Decision1" isLeaf="false">
+            <elementDefinition Id="b9ecd321-9249-4a02-b37c-76c0e647b0ed" />
+            <flowNodeTargets>
+              <controlFlow Id="33062b68-1c97-4677-8c46-52af2ca6c8b3" guard="Oublie MDP" isLeaf="false">
+                <opaqueActionMoniker Id="8f5bee5c-c588-42de-8df3-b5665ab788f3" LastKnownName="Réinitialise MDP" />
+                <elementDefinition Id="128e3220-8711-42eb-b58b-254fd542865d" />
+              </controlFlow>
+              <controlFlow Id="f66d8b26-ccbb-4c27-89e5-b2e4a075f626" guard="Connait ses identifiants" isLeaf="false">
+                <opaqueActionMoniker Id="51f5cf6a-8353-4472-a857-f165c681bc14" LastKnownName="NOUVELLE COMMANDE" />
+                <elementDefinition Id="e8d3ccd4-ba85-4ec4-a79a-4b8bf98a827c" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction Id="8f5bee5c-c588-42de-8df3-b5665ab788f3" name="Réinitialise MDP" isLeaf="false">
+            <elementDefinition Id="7ca77ef8-3412-48d7-b4ec-a64419c21860" />
+            <flowNodeTargets>
+              <controlFlow Id="8de49f77-2794-40dd-83ea-06115846a4c1" isLeaf="false">
+                <opaqueActionMoniker Id="68f87712-1f90-4c7c-a5ef-d457a26f6a72" LastKnownName="Connexion à la session commercial" />
+                <elementDefinition Id="0531f42e-0b33-4d39-b99c-2bc6cda59030" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="1cfde89a-f79f-4f52-9ce3-a24843a34de8" name="Recherche un client" isLeaf="false">
+            <elementDefinition Id="1fa79abf-cb6b-4e13-afee-38449ab6f67f" />
+            <flowNodeTargets>
+              <controlFlow Id="a8e601e0-cb24-4f09-9641-cfb6afd98237" isLeaf="false">
+                <decisionNodeMoniker Id="c785dd37-d82a-4c21-858e-40d7116d670b" LastKnownName="Decision2" />
+                <elementDefinition Id="789e317d-df99-4727-ae87-6ed11f0f3658" />
+              </controlFlow>
+              <controlFlow Id="7db490f3-4d66-4eff-b85d-26f987a8e7d8" isLeaf="false">
+                <opaqueActionMoniker Id="3304fe5c-a932-4c2c-b678-dceb298250d6" LastKnownName="L'application plante" />
+                <elementDefinition Id="75cb8360-de32-445d-a4da-3f967d787c54" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode Id="c785dd37-d82a-4c21-858e-40d7116d670b" name="Decision2" isLeaf="false">
+            <elementDefinition Id="62f13bc3-774d-47c8-8440-0a332642b905" />
+            <flowNodeTargets>
+              <controlFlow Id="c2759abf-67f3-4021-b460-ad925012fdaf" guard="Ne trouve pas le client" isLeaf="false">
+                <opaqueActionMoniker Id="7c8a6b04-9f58-4a07-bf76-2157b15d743a" LastKnownName="Inscrit le client dans le fichier" />
+                <elementDefinition Id="4c19bc07-fc3b-45a4-846b-d65ad27d476e" />
+              </controlFlow>
+              <controlFlow Id="b00b3c20-2a08-44df-bcfa-4b995c8aaf10" guard="Trouve le client" isLeaf="false">
+                <opaqueActionMoniker Id="c0618606-358c-459f-872f-0a850d8c58ae" LastKnownName="Le système lie la fiche client à la nouvelle commande" />
+                <elementDefinition Id="4a0d060a-b974-4386-9539-55bc6f1f9c5a" />
+              </controlFlow>
+              <controlFlow Id="46691cad-e90e-4d5e-8eb5-81c689120a75" guard="Le système affiche que le client a une commande non réglée dans le délai" isLeaf="false">
+                <opaqueActionMoniker Id="1b27d55a-7b3e-4c37-a3ab-e7866ae504c2" LastKnownName="Impossibilité de commander pour ce client" />
+                <elementDefinition Id="08a044bf-0ff9-4381-a6e1-ae5f901aa999" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction Id="7c8a6b04-9f58-4a07-bf76-2157b15d743a" name="Inscrit le client dans le fichier" isLeaf="false">
+            <elementDefinition Id="0dbc65d7-5202-484c-8a93-26a6b20a417c" />
+            <flowNodeTargets>
+              <controlFlow Id="ac29b8e8-f8af-4e71-a49d-c7223a2b0559" isLeaf="false">
+                <opaqueActionMoniker Id="1cfde89a-f79f-4f52-9ce3-a24843a34de8" LastKnownName="Recherche un client" />
+                <elementDefinition Id="1e96dbe7-5cad-484d-83c0-7f8dda4845cb" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="57ccb812-bc41-4162-b0eb-042e65509b13" name="Recherche un produit" isLeaf="false">
+            <elementDefinition Id="4fd022d2-e638-4b97-823d-803c7d32a09e" />
+            <flowNodeTargets>
+              <controlFlow Id="806dd9d9-7a10-4c11-a4e6-819ff1450442" isLeaf="false">
+                <decisionNodeMoniker Id="0ff48a6f-940b-44f5-9dd2-a182467c8bae" LastKnownName="Decision3" />
+                <elementDefinition Id="0e57ed13-7fc2-4e42-b655-f4c5f8acacaf" />
+              </controlFlow>
+              <controlFlow Id="14c319e2-72e0-4e3d-ac91-6ce9cb8c22e5" isLeaf="false">
+                <opaqueActionMoniker Id="3304fe5c-a932-4c2c-b678-dceb298250d6" LastKnownName="L'application plante" />
+                <elementDefinition Id="83a506bf-bc1f-480a-89e5-64569b77855d" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode Id="0ff48a6f-940b-44f5-9dd2-a182467c8bae" name="Decision3" isLeaf="false">
+            <elementDefinition Id="dc14fb8e-c6c5-4f4f-b594-f83126688e79" />
+            <flowNodeTargets>
+              <controlFlow Id="07bcec85-8889-425b-a60b-840504fbdd47" guard="Le STOCK produit = 0" isLeaf="false">
+                <opaqueActionMoniker Id="2a32aebc-2ea6-490e-b6c6-40a9bf8f9554" LastKnownName="Impossibilité de continuer la commande" />
+                <elementDefinition Id="995fe3d3-2df3-4485-99ae-15b14450f22d" />
+              </controlFlow>
+              <controlFlow Id="80ca79af-b9bc-4b26-83fd-32deb1aa4990" guard="Erreur sur la fiche produit" isLeaf="false">
+                <opaqueActionMoniker Id="4b59e79b-15e3-4e3c-a5d1-33e3300a6c36" LastKnownName="Modification de la fiche par le service de gestion des produits" />
+                <elementDefinition Id="b281dff9-8797-4776-8e4b-7cbe8e86251c" />
+              </controlFlow>
+              <controlFlow Id="4574858b-f8f8-4d3e-b0dd-10c1217ea192" guard="Le STOCK produit &gt; 0" isLeaf="false">
+                <opaqueActionMoniker Id="5f7b6741-d065-4964-8b53-412049682909" LastKnownName="Le système lie le produit à la nouvelle commande" />
+                <elementDefinition Id="bb3de5b7-c3e2-463f-9a60-44c2b164a4f1" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction Id="2a32aebc-2ea6-490e-b6c6-40a9bf8f9554" name="Impossibilité de continuer la commande" isLeaf="false">
+            <elementDefinition Id="e6d5905b-7ed3-48f3-a6f4-14f7f877c5a0" />
+            <flowNodeTargets>
+              <controlFlow Id="2abc1bc0-f96d-4c49-bb71-f090201c0aac" guard="Abandon de procédure" isLeaf="false">
+                <activityFinalNodeMoniker Id="955b7c4e-df3e-484b-b41b-a6da572e4576" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="d00f5798-7463-4956-a673-51d3a4698b90" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="c0618606-358c-459f-872f-0a850d8c58ae" name="Le système lie la fiche client à la nouvelle commande" isLeaf="false">
+            <elementDefinition Id="391162a5-abd7-473e-88cc-c7ab2b107c9d" />
+            <flowNodeTargets>
+              <controlFlow Id="8c9e4150-800c-4168-8811-c2e192d869ee" isLeaf="false">
+                <opaqueActionMoniker Id="57ccb812-bc41-4162-b0eb-042e65509b13" LastKnownName="Recherche un produit" />
+                <elementDefinition Id="325761eb-323a-4ccd-8b96-c657c61e5e0e" />
+              </controlFlow>
+              <controlFlow Id="e808d483-5bab-4272-ad84-8c64f0628706" isLeaf="false">
+                <opaqueActionMoniker Id="3304fe5c-a932-4c2c-b678-dceb298250d6" LastKnownName="L'application plante" />
+                <elementDefinition Id="505fea66-7c63-4baa-91c0-221cf9e6a108" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <activityFinalNode Id="955b7c4e-df3e-484b-b41b-a6da572e4576" name="ActivityFinal1" isLeaf="false">
+            <elementDefinition Id="91756c69-51c9-4ffb-9d69-c4afa146f3e0" />
+          </activityFinalNode>
+          <opaqueAction Id="f95cecd1-ea8a-4736-9c13-870bf7df2e5d" name="Indique la quantité du produit" isLeaf="false">
+            <elementDefinition Id="9f64e643-e05a-491f-9195-a404a6e0bfa0" />
+            <flowNodeTargets>
+              <controlFlow Id="2cfdec64-9689-4fe8-89e9-afd172ff36dd" isLeaf="false">
+                <opaqueActionMoniker Id="f93e8e30-2b2e-42c0-ab75-7a3a81d11341" LastKnownName="Indique les informations de livraison" />
+                <elementDefinition Id="58c1b8c5-f602-4f7e-9d27-77328bf48351" />
+              </controlFlow>
+              <controlFlow Id="41a28fc4-51a0-4b98-ab67-0c7e2aa5be25" isLeaf="false">
+                <opaqueActionMoniker Id="3304fe5c-a932-4c2c-b678-dceb298250d6" LastKnownName="L'application plante" />
+                <elementDefinition Id="0729a6aa-47b0-4fd5-a819-8d0670866e6f" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="f93e8e30-2b2e-42c0-ab75-7a3a81d11341" name="Indique les informations de livraison" isLeaf="false">
+            <elementDefinition Id="1176c9f4-aac5-4c31-ac34-15f6060f49f6" />
+            <flowNodeTargets>
+              <controlFlow Id="4fe734fe-2afc-4a86-9849-4cbe753e22da" isLeaf="false">
+                <opaqueActionMoniker Id="aad2e2a3-e738-4449-954b-32c86bae4ffe" LastKnownName="Valide la commande" />
+                <elementDefinition Id="2dcab0ea-190f-4a9c-a27a-058b4964a6e1" />
+              </controlFlow>
+              <controlFlow Id="66450205-1533-45c7-b9d8-23ed34e941cd" isLeaf="false">
+                <opaqueActionMoniker Id="3304fe5c-a932-4c2c-b678-dceb298250d6" LastKnownName="L'application plante" />
+                <elementDefinition Id="2013ad6e-5966-441e-a370-cd0c8c39cd44" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="4b59e79b-15e3-4e3c-a5d1-33e3300a6c36" name="Modification de la fiche par le service de gestion des produits" isLeaf="false">
+            <elementDefinition Id="eb1ec382-50c8-4251-8584-6de837b79955" />
+            <flowNodeTargets>
+              <controlFlow Id="af86f46b-9503-4369-a114-970001fdad3c" guard="Le commercial reprend au début pour effectuer la commande" isLeaf="false">
+                <opaqueActionMoniker Id="68f87712-1f90-4c7c-a5ef-d457a26f6a72" LastKnownName="Connexion à la session commercial" />
+                <elementDefinition Id="33213382-5524-4519-97cb-72628b351185" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="aad2e2a3-e738-4449-954b-32c86bae4ffe" name="Valide la commande" isLeaf="false">
+            <elementDefinition Id="b253f49d-65af-42cd-98d3-3e587e13b773" />
+            <flowNodeTargets>
+              <controlFlow Id="99f40660-7bb3-4cfe-8d99-bc655af385f9" isLeaf="false">
+                <opaqueActionMoniker Id="ff707033-80bc-4d98-8f4e-9cd6ce409d84" LastKnownName="Le système affiche un message de demande confirmation de la commande" />
+                <elementDefinition Id="95f8ed70-7de7-4155-be81-9f2f6234274d" />
+              </controlFlow>
+              <controlFlow Id="ef63d200-39e1-45ab-bd1c-3fd14f6bf70b" isLeaf="false">
+                <opaqueActionMoniker Id="3304fe5c-a932-4c2c-b678-dceb298250d6" LastKnownName="L'application plante" />
+                <elementDefinition Id="c694bf3e-84ff-4589-961d-163ed27c1f2b" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="1b27d55a-7b3e-4c37-a3ab-e7866ae504c2" name="Impossibilité de commander pour ce client" isLeaf="false">
+            <elementDefinition Id="304f97b7-334d-4b78-acbf-db24275d3a2c" />
+            <flowNodeTargets>
+              <controlFlow Id="90054968-6702-43a8-8ebc-dbb6dc286d35" guard="Abandon de procédure" isLeaf="false">
+                <activityFinalNodeMoniker Id="82566fc6-8d20-45c1-8d1a-6fd757518684" LastKnownName="ActivityFinal2" />
+                <elementDefinition Id="1bb1dd03-c7d8-4cd5-9301-a2fb9f6b6878" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <activityFinalNode Id="82566fc6-8d20-45c1-8d1a-6fd757518684" name="ActivityFinal2" isLeaf="false">
+            <elementDefinition Id="664eafef-72b4-4111-9c7d-79bed8c03962" />
+          </activityFinalNode>
+          <opaqueAction Id="ff707033-80bc-4d98-8f4e-9cd6ce409d84" name="Le système affiche un message de demande confirmation de la commande" isLeaf="false">
+            <elementDefinition Id="228b17aa-a2da-442d-91ce-0cbd12bf42b5" />
+            <flowNodeTargets>
+              <controlFlow Id="b9d33190-8b1b-4c02-8163-e938889c6b81" isLeaf="false">
+                <opaqueActionMoniker Id="b2b209fd-3117-4fcd-8126-376e0532fe23" LastKnownName="Confirme la validation de la comande" />
+                <elementDefinition Id="a49b6f25-e34a-4ea0-bd28-2c9f1cbd5ec8" />
+              </controlFlow>
+              <controlFlow Id="ee586ca9-da4a-4b9e-9d05-3a664b6ff355" isLeaf="false">
+                <opaqueActionMoniker Id="3304fe5c-a932-4c2c-b678-dceb298250d6" LastKnownName="L'application plante" />
+                <elementDefinition Id="fbeb2294-ea3a-4734-ad6f-fb97074b2753" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="b2b209fd-3117-4fcd-8126-376e0532fe23" name="Confirme la validation de la comande" isLeaf="false">
+            <elementDefinition Id="68ae73ef-ab8e-484f-9cd3-a029bed6599e" />
+            <flowNodeTargets>
+              <controlFlow Id="a30f01fc-2f04-4105-a395-054067abf008" isLeaf="false">
+                <opaqueActionMoniker Id="a990dbe7-e503-4fe9-af4d-9cd8945a573b" LastKnownName="Le système affiche que la commande a été enregistré et propose" />
+                <elementDefinition Id="cd394720-3c7e-4ffd-9a07-f6fd21c3c721" />
+              </controlFlow>
+              <controlFlow Id="0bf16a91-bb45-40a8-923d-5215102b8c90" isLeaf="false">
+                <opaqueActionMoniker Id="3304fe5c-a932-4c2c-b678-dceb298250d6" LastKnownName="L'application plante" />
+                <elementDefinition Id="2c55d81d-e833-4d3d-bcf3-d6f240b7aac6" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="a990dbe7-e503-4fe9-af4d-9cd8945a573b" name="Le système affiche que la commande a été enregistré et propose" isLeaf="false">
+            <elementDefinition Id="ed1c7573-053c-4695-aa5d-a88d9b664af2" />
+            <flowNodeTargets>
+              <controlFlow Id="2879ff3c-5898-4f42-8671-86a20a15d44d" isLeaf="false">
+                <decisionNodeMoniker Id="7148328a-b98c-4421-987e-b7f934785771" LastKnownName="Decision4" />
+                <elementDefinition Id="7f0173e8-d31d-4d47-bd5e-00ea55ab1f60" />
+              </controlFlow>
+              <controlFlow Id="1e01f19a-b1aa-406f-99c4-b29cfe2954e5" isLeaf="false">
+                <opaqueActionMoniker Id="3304fe5c-a932-4c2c-b678-dceb298250d6" LastKnownName="L'application plante" />
+                <elementDefinition Id="b8ef584f-0bfa-495f-8e4d-a47978dc483b" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode Id="7148328a-b98c-4421-987e-b7f934785771" name="Decision4" isLeaf="false">
+            <elementDefinition Id="c5850b40-8934-406e-a54c-0f36342b4ef1" />
+            <flowNodeTargets>
+              <controlFlow Id="4a46e56c-4a78-45e5-8698-5c7cc51249f6" isLeaf="false">
+                <opaqueActionMoniker Id="e6038bee-1991-4bd6-98f2-dbc9b2282e68" LastKnownName="ENREGISTRER le bon de commande et la facture" />
+                <elementDefinition Id="6edb7cce-480b-4d45-a192-7ca03a28f324" />
+              </controlFlow>
+              <controlFlow Id="b20b70e2-fb13-4d90-9a73-1d9e05cc11b7" isLeaf="false">
+                <opaqueActionMoniker Id="a62a0f7a-e9dc-48dd-ade1-d4fd1fa3222f" LastKnownName="IMPRIMER le bon de commande et la facture" />
+                <elementDefinition Id="eae2f324-2adc-465a-ab1d-07e5ba4f3d6e" />
+              </controlFlow>
+              <controlFlow Id="9bfab94b-0a75-46d5-a4ac-ebe30b835c33" isLeaf="false">
+                <opaqueActionMoniker Id="a51b2380-5734-4d1e-ac2d-4dda0087a391" LastKnownName="ENVOYER PAR MAIL le bon de commande et la facture" />
+                <elementDefinition Id="5514d6a1-412c-4f9f-95a8-05a2e6d3a68f" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction Id="e6038bee-1991-4bd6-98f2-dbc9b2282e68" name="ENREGISTRER le bon de commande et la facture" isLeaf="false">
+            <elementDefinition Id="71aca971-8c42-4efa-a960-da36b42562a7" />
+            <flowNodeTargets>
+              <controlFlow Id="15eb3f85-657b-4ed1-9f30-6dd54bd7b893" isLeaf="false">
+                <opaqueActionMoniker Id="4d137580-2ece-45e8-9c40-859af90d9220" LastKnownName="Sélectionne l'option choisie" />
+                <elementDefinition Id="0b6023f8-d48c-438d-a20c-1a57808f9352" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="a62a0f7a-e9dc-48dd-ade1-d4fd1fa3222f" name="IMPRIMER le bon de commande et la facture" isLeaf="false">
+            <elementDefinition Id="639214cb-772e-4ccd-b0b1-b805c67877ef" />
+            <flowNodeTargets>
+              <controlFlow Id="4118a05e-1a1e-4a3d-959c-33d0328ebec7" isLeaf="false">
+                <opaqueActionMoniker Id="4d137580-2ece-45e8-9c40-859af90d9220" LastKnownName="Sélectionne l'option choisie" />
+                <elementDefinition Id="361835db-17d2-458b-8c15-d79831eb2710" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="a51b2380-5734-4d1e-ac2d-4dda0087a391" name="ENVOYER PAR MAIL le bon de commande et la facture" isLeaf="false">
+            <elementDefinition Id="68a5b4e4-f0ba-46af-aa93-db372e116ad7" />
+            <flowNodeTargets>
+              <controlFlow Id="23b98fc7-4be7-4357-9f67-b94ed6e33ea7" isLeaf="false">
+                <opaqueActionMoniker Id="4d137580-2ece-45e8-9c40-859af90d9220" LastKnownName="Sélectionne l'option choisie" />
+                <elementDefinition Id="84e1003d-69b6-4897-89cc-f67576d52ee1" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="4d137580-2ece-45e8-9c40-859af90d9220" name="Sélectionne l'option choisie" isLeaf="false">
+            <elementDefinition Id="29e5b28a-a45b-4266-87ba-8edbc00a96df" />
+            <flowNodeTargets>
+              <controlFlow Id="f856ce99-1d3f-430d-9094-62a3240935d8" isLeaf="false">
+                <opaqueActionMoniker Id="aca916e5-c92e-4334-bba4-df91d03610f1" LastKnownName="Le système affiche le Bon de Commande et la Facture et lance l'option sélectionnée" />
+                <elementDefinition Id="4e77460c-37b1-42de-a5be-ff803f8ef29b" />
+              </controlFlow>
+              <controlFlow Id="8b6eb149-9b1c-4786-8a0f-b339af8892b3" isLeaf="false">
+                <opaqueActionMoniker Id="3304fe5c-a932-4c2c-b678-dceb298250d6" LastKnownName="L'application plante" />
+                <elementDefinition Id="4c80a01f-d67d-47a6-b40c-5f9ee9619e4f" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="aca916e5-c92e-4334-bba4-df91d03610f1" name="Le système affiche le Bon de Commande et la Facture et lance l'option sélectionnée" isLeaf="false">
+            <elementDefinition Id="9dcdcb3b-c0cc-40ec-9c31-fef3b5f83f86" />
+            <flowNodeTargets>
+              <controlFlow Id="2833d5dd-aa7e-4c53-af5b-a7c5f5edb4df" guard="La commande est finalisée" isLeaf="false">
+                <activityFinalNodeMoniker Id="4bb82977-62e7-4d8b-b2fd-572b7d54a9e7" LastKnownName="ActivityFinal3" />
+                <elementDefinition Id="cda0bb34-e3a4-4335-89c6-dfae05f0b8be" />
+              </controlFlow>
+              <controlFlow Id="1708cb00-1f78-445d-81a9-f47c33eb8ebd" isLeaf="false">
+                <opaqueActionMoniker Id="3304fe5c-a932-4c2c-b678-dceb298250d6" LastKnownName="L'application plante" />
+                <elementDefinition Id="28b391b8-7368-4b55-aa7c-825e9da40f09" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <activityFinalNode Id="4bb82977-62e7-4d8b-b2fd-572b7d54a9e7" name="ActivityFinal3" isLeaf="false">
+            <elementDefinition Id="a35670a0-12d8-4136-90b0-f9acdbc1a26a" />
+          </activityFinalNode>
+          <opaqueAction Id="5f7b6741-d065-4964-8b53-412049682909" name="Le système lie le produit à la nouvelle commande" isLeaf="false">
+            <elementDefinition Id="541a4231-b4f9-4f59-b1ea-44b7f0a99bef" />
+            <flowNodeTargets>
+              <controlFlow Id="91b67f27-7f0e-4da4-9ee6-a6d76a5d27ef" isLeaf="false">
+                <opaqueActionMoniker Id="f95cecd1-ea8a-4736-9c13-870bf7df2e5d" LastKnownName="Indique la quantité du produit" />
+                <elementDefinition Id="c990d3dc-e968-48b2-9faf-e992bda38d6d" />
+              </controlFlow>
+              <controlFlow Id="c3ffc1b3-6651-4512-8613-38beb168d426" isLeaf="false">
+                <opaqueActionMoniker Id="3304fe5c-a932-4c2c-b678-dceb298250d6" LastKnownName="L'application plante" />
+                <elementDefinition Id="05cf9008-41ef-452b-982b-338aa7979aec" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="84e866be-43f9-415e-be19-405948bd71d9" name="L'application redémarre" isLeaf="false">
+            <elementDefinition Id="fc2e16c1-c8c2-4e02-9ada-3a316dfdd020" />
+            <flowNodeTargets>
+              <controlFlow Id="37bbddd1-06ef-4c07-b840-0604f65b1cc1" isLeaf="false">
+                <opaqueActionMoniker Id="68f87712-1f90-4c7c-a5ef-d457a26f6a72" LastKnownName="Connexion à la session commercial" />
+                <elementDefinition Id="cf852930-c9a3-4a66-be52-ac9f191cbc96" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="3304fe5c-a932-4c2c-b678-dceb298250d6" name="L'application plante" isLeaf="false">
+            <elementDefinition Id="cae0d325-3006-4088-a52b-23c66a5978e0" />
+            <flowNodeTargets>
+              <controlFlow Id="2475d545-a592-4ec2-925b-25861a39636b" guard="Relance le l'application" isLeaf="false">
+                <decisionNodeMoniker Id="fd9a691f-fcbe-4f73-b6cf-f57f6842071a" LastKnownName="Decision5" />
+                <elementDefinition Id="af8ed5a9-9b34-4e9d-bd5e-4f6de629477f" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode Id="fd9a691f-fcbe-4f73-b6cf-f57f6842071a" name="Decision5" isLeaf="false">
+            <elementDefinition Id="3559fe44-3578-41af-a29a-3ad57273f9b0" />
+            <flowNodeTargets>
+              <controlFlow Id="7d6b6f66-e581-4c73-b1ed-21d5ef703edb" isLeaf="false">
+                <opaqueActionMoniker Id="84e866be-43f9-415e-be19-405948bd71d9" LastKnownName="L'application redémarre" />
+                <elementDefinition Id="51cc93e0-72c6-4ace-a33d-56b4c35164a3" />
+              </controlFlow>
+              <controlFlow Id="a95acc31-6fe3-4cc4-ad74-4520cfb40c71" isLeaf="false">
+                <opaqueActionMoniker Id="a5fbabe0-9caa-4753-b273-f65f68a937fe" LastKnownName="L'application ne redémarre pas ou pas correctement" />
+                <elementDefinition Id="248695ea-fe50-474f-9b70-fc5131d4bd00" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction Id="a5fbabe0-9caa-4753-b273-f65f68a937fe" name="L'application ne redémarre pas ou pas correctement" isLeaf="false">
+            <elementDefinition Id="ae0a2a2c-6e64-4973-8132-f6cf8c1a1135" />
+            <flowNodeTargets>
+              <controlFlow Id="f6559425-f4be-46b2-88ee-23df5dd04691" guard="Abandon de procédure" isLeaf="false">
+                <activityFinalNodeMoniker Id="50542a17-ae66-44e0-a42b-33a5d54fb58f" LastKnownName="ActivityFinal4" />
+                <elementDefinition Id="e89449b8-0831-4131-96e0-414524443ac0" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <activityFinalNode Id="50542a17-ae66-44e0-a42b-33a5d54fb58f" name="ActivityFinal4" isLeaf="false">
+            <elementDefinition Id="e38cd39d-7ab8-4c68-97c2-0be53b21d2dd" />
+          </activityFinalNode>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="36b1357c-ed5d-4655-8b55-d8ae1328fd41" name="Fil Rouge">
+    <elementDefinition Id="f9b1555a-a827-4fc5-af18-a33f7391cc3e" />
+  </package>
+</activityRootModel>
